@@ -15,11 +15,10 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 
-import brandAsset from "@/assets/fudoshin-brand.jpg.asset.json";
-import symbolAsset from "@/assets/fudoshin-symbol.jpg.asset.json";
-
 const WHATSAPP_URL =
   "https://wa.me/555195555267?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20as%20aulas%20de%20Karate%20Shotokan%20do%20Fudoshin%20Dojo.";
+const BRAND_IMAGE_URL = `${import.meta.env.BASE_URL}fudoshin-brand.jpg`;
+const SYMBOL_IMAGE_URL = `${import.meta.env.BASE_URL}fudoshin-symbol.jpg`;
 
 const benefits = [
   {
@@ -145,7 +144,7 @@ function Index() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
           <a href="#inicio" className="flex min-h-11 items-center gap-3" aria-label="Fudoshin Dojo, início">
             <img
-              src={symbolAsset.url}
+              src={SYMBOL_IMAGE_URL}
               alt="Símbolo Fudoshin Dojo"
               width="48"
               height="48"
@@ -219,7 +218,7 @@ function Index() {
             <div className="hero-enter hero-delay-3 relative mx-auto w-full max-w-md lg:max-w-lg">
               <div className="brand-frame">
                 <img
-                  src={brandAsset.url}
+                  src={BRAND_IMAGE_URL}
                   alt="Fudoshin Dojo, Karatê Shotokan"
                   width="768"
                   height="768"
@@ -303,7 +302,7 @@ function Index() {
             <div data-reveal className="reveal relative mx-auto max-w-sm">
               <div className="symbol-halo">
                 <img
-                  src={symbolAsset.url}
+                  src={SYMBOL_IMAGE_URL}
                   alt="Emblema do Fudoshin Dojo"
                   width="768"
                   height="768"
@@ -432,7 +431,7 @@ function Index() {
         <div className="section-container flex flex-col gap-7 sm:flex-row sm:items-center sm:justify-between">
           <a href="#inicio" className="flex min-h-11 items-center gap-3">
             <img
-              src={symbolAsset.url}
+              src={SYMBOL_IMAGE_URL}
               alt=""
               width="40"
               height="40"
