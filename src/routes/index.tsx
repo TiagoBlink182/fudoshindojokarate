@@ -140,7 +140,7 @@ function Index() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <header className="absolute inset-x-0 top-0 z-30 border-b border-hero-border bg-hero/90 backdrop-blur-sm">
+      <header className="fixed inset-x-0 top-0 z-30 border-b border-hero-border bg-hero/90 backdrop-blur-sm">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
           <a href="#inicio" className="flex min-h-11 items-center gap-3" aria-label="Fudoshin Dojo, início">
             <img
@@ -148,7 +148,7 @@ function Index() {
               alt="Símbolo Fudoshin Dojo"
               width="48"
               height="48"
-              className="size-12 rounded-full border border-primary/50 object-cover"
+                className="brand-mark-hover aspect-square h-auto w-full rounded-full object-cover"
             />
             <span className="hidden font-bold uppercase text-hero-foreground sm:block">
               Fudoshin <span className="text-primary">Dojo</span>
@@ -163,11 +163,10 @@ function Index() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="button button-primary min-h-11 px-4 text-sm sm:px-5"
+            className="button button-primary appointment-glow min-h-11 max-w-[13rem] px-3 text-xs leading-tight sm:max-w-none sm:px-5 sm:text-sm"
           >
             <MessageCircle className="size-4" aria-hidden="true" />
-            <span className="hidden sm:inline">Agendar aula</span>
-            <span className="sm:hidden">WhatsApp</span>
+            <span className="text-center">Agendar aula experimental gratuita</span>
           </a>
         </div>
       </header>
@@ -226,10 +225,10 @@ function Index() {
                   className="aspect-square h-auto w-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-5 -left-3 border-l-4 border-primary bg-surface-dark px-5 py-4 shadow-strong sm:-left-8">
-                <p className="text-xs font-bold uppercase text-primary">Fudoshin</p>
-                <p className="mt-1 font-bold text-hero-foreground">Espírito inabalável</p>
-              </div>
+                <div className="absolute -bottom-5 -left-3 border-l-4 border-primary bg-surface-dark px-5 py-4 shadow-strong sm:-left-8 hidden">
+                  <p className="text-xs font-bold uppercase text-primary">Fudoshin</p>
+                  <p className="mt-1 font-bold text-hero-foreground">Espírito inabalável</p>
+                </div>
             </div>
           </div>
         </section>
