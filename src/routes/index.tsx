@@ -148,7 +148,7 @@ function Index() {
               alt="Símbolo Fudoshin Dojo"
               width="48"
               height="48"
-                className="brand-mark-hover aspect-square h-auto w-full rounded-full object-cover"
+                className="brand-mark-hover size-12 rounded-full border border-primary/50 object-cover"
             />
             <span className="hidden font-bold uppercase text-hero-foreground sm:block">
               Fudoshin <span className="text-primary">Dojo</span>
@@ -163,7 +163,7 @@ function Index() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="button button-primary appointment-glow min-h-11 max-w-[13rem] px-3 text-xs leading-tight sm:max-w-none sm:px-5 sm:text-sm"
+            className="button button-primary appointment-glow min-h-11 max-w-52 px-3 text-xs leading-tight sm:max-w-none sm:px-5 sm:text-sm"
           >
             <MessageCircle className="size-4" aria-hidden="true" />
             <span className="text-center">Agendar aula experimental gratuita</span>
@@ -225,10 +225,6 @@ function Index() {
                   className="aspect-square h-auto w-full object-cover"
                 />
               </div>
-                <div className="absolute -bottom-5 -left-3 border-l-4 border-primary bg-surface-dark px-5 py-4 shadow-strong sm:-left-8 hidden">
-                  <p className="text-xs font-bold uppercase text-primary">Fudoshin</p>
-                  <p className="mt-1 font-bold text-hero-foreground">Espírito inabalável</p>
-                </div>
             </div>
           </div>
         </section>
@@ -306,7 +302,7 @@ function Index() {
                   width="768"
                   height="768"
                   loading="lazy"
-                  className="aspect-square h-auto w-full rounded-full object-cover"
+                  className="brand-mark-hover aspect-square h-auto w-full rounded-full object-cover"
                 />
               </div>
             </div>
@@ -319,8 +315,9 @@ function Index() {
               <p className="mt-4 text-lg leading-relaxed text-hero-muted">
                 No dojo, esse princípio ganha vida por meio do Karate Shotokan tradicional, linhagem JKA, com ensino fiel aos fundamentos, à saudação e ao respeito pela arte.
               </p>
-              <div className="mt-9 grid grid-cols-2 gap-5 border-t border-hero-border pt-7 sm:grid-cols-3">
+              <div className="mt-9 grid grid-cols-2 gap-5 border-t border-hero-border pt-7 sm:grid-cols-4">
                 {[
+                  ["Fudoshin", "Espírito inabalável"],
                   ["Kihon", "Fundamentos"],
                   ["Kata", "Precisão"],
                   ["Kumite", "Aplicação"],
@@ -427,7 +424,7 @@ function Index() {
       </main>
 
       <footer className="bg-hero py-10 text-hero-muted">
-        <div className="section-container flex flex-col gap-7 sm:flex-row sm:items-center sm:justify-between">
+        <div className="section-container flex flex-col items-center gap-5 text-center">
           <a href="#inicio" className="flex min-h-11 items-center gap-3">
             <img
               src={SYMBOL_IMAGE_URL}
@@ -439,10 +436,7 @@ function Index() {
             />
             <span className="font-bold text-hero-foreground">Fudoshin Dojo Karate</span>
           </a>
-          <div className="text-sm leading-relaxed sm:text-right">
-            <p>Karate Shotokan JKA em Parobé</p>
-            <p>[PLACEHOLDER: informar CNPJ]</p>
-          </div>
+          <p className="text-sm leading-relaxed">Karate Shotokan JKA em Parobé [PLACEHOLDER: informar CNPJ]</p>
         </div>
       </footer>
 
@@ -453,8 +447,9 @@ function Index() {
         className="whatsapp-float"
         aria-label="Conversar com o Fudoshin Dojo no WhatsApp"
       >
-        <MessageCircle className="size-6" aria-hidden="true" />
-        <span className="hidden sm:inline">Fale com o dojo</span>
+        <svg viewBox="0 0 24 24" className="size-7" fill="currentColor" aria-hidden="true">
+          <path d="M20.52 3.48A11.8 11.8 0 0 0 12.13 0C5.6 0 .28 5.3.28 11.84c0 2.09.55 4.14 1.6 5.94L.18 24l6.38-1.67a11.9 11.9 0 0 0 5.57 1.42h.01c6.53 0 11.84-5.31 11.84-11.84 0-3.17-1.23-6.15-3.46-8.43zm-8.39 18.26a9.88 9.88 0 0 1-5.03-1.37l-.36-.21-3.78.99 1.01-3.68-.23-.38a9.84 9.84 0 0 1-1.51-5.25c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.98 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.9-9.88 9.9zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.79.38-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.48.71.31 1.27.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z" />
+        </svg>
       </a>
     </div>
   );
